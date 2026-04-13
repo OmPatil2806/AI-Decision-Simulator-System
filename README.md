@@ -1,4 +1,4 @@
-# 🧠 AI Decision Simulator System
+#  AI Decision Simulator System
 
 A **multi-agent AI application** that takes any decision problem and simulates future scenarios, predicts outcomes, calculates risk, and delivers a final recommendation — all powered by Google Gemini.
 
@@ -35,7 +35,7 @@ ai_decision_simulator/
 
 ---
 
-## 🚀 Setup Instructions
+##  Setup Instructions
 
 ### 1. Clone or download the project
 
@@ -79,7 +79,7 @@ Get your free Gemini API key at: **https://aistudio.google.com**
 
 ---
 
-## ▶️ Running the App
+##  Running the App
 
 ```bash
 streamlit run app.py
@@ -89,19 +89,7 @@ The app opens at **http://localhost:8501**
 
 ---
 
-## 🤖 Agent Pipeline
-
-| Step | Agent | AI? | Output |
-|------|-------|-----|--------|
-| 1 | `ContextAnalyzer` | ✅ Gemini | Structured decision context (JSON) |
-| 2 | `ScenarioGenerator` | ✅ Gemini | 4 future scenario paths (JSON) |
-| 3 | `OutcomePredictor` | ✅ Gemini | Positive/negative impacts per scenario |
-| 4 | `RiskCalculator` | ❌ Pure Python | Risk score 0–100 per scenario |
-| 5 | `DecisionEngine` | ❌ Pure Python | Ranked scenarios + final recommendation |
-
----
-
-## 💡 Example Inputs & Outputs
+##  Example Inputs & Outputs
 
 ### Input
 ```
@@ -159,7 +147,7 @@ Adjust scoring weights in `agents/decision_engine.py` under `SCORE_WEIGHTS`.
 
 ---
 
-## 📦 Dependencies
+##  Dependencies
 
 | Package | Purpose |
 |---------|---------|
@@ -168,7 +156,7 @@ Adjust scoring weights in `agents/decision_engine.py` under `SCORE_WEIGHTS`.
 
 ---
 
-## 📝 History
+##  History
 
 All past analyses are automatically saved to `data/history.json`. The last 5 are shown in the sidebar. You can clear history programmatically:
 
@@ -180,7 +168,7 @@ pipeline.clear_history()
 
 ---
 
-## 🏗️ Extending the System
+##  Extending the System
 
 - **Add a new agent**: Create a class in `agents/`, add its prompt to `core/prompts.py`, and wire it in `core/pipeline.py`
 - **Custom risk factors**: Edit `utils/risk_calculator.py`
